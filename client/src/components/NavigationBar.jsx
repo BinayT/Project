@@ -1,8 +1,19 @@
 import React from "react";
-import { Navbar, NavbarToggler, NavbarBrand, Nav, NavItem } from "reactstrap";
+import {
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavbarText,
+  Button,
+  Badge,
+} from "reactstrap";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 export const NavigationBar = () => {
+  const counter = useSelector((state) => state.counterReducer);
   return (
     <div>
       <Navbar color="light" light expand="md">
@@ -24,6 +35,11 @@ export const NavigationBar = () => {
             </Link>
           </NavItem>
         </Nav>
+        <NavbarText>
+          <Button color="primary" outline>
+            Cart <Badge color="secondary">{counter}</Badge>
+          </Button>
+        </NavbarText>
       </Navbar>
     </div>
   );

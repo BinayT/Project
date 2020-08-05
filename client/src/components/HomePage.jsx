@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { increment, decrement, logInOut } from "../actions";
+import CardComponent from "./CardComponent";
 
 export const HomePage = () => {
   const counter = useSelector((state) => state.counterReducer);
@@ -8,8 +9,8 @@ export const HomePage = () => {
   const dispatch = useDispatch();
   return (
     <div>
-      <h1>Home Page</h1>
-      {counter == 0 ? null : (
+      {/* <h1>Home Page</h1>
+      {counter === 0 ? null : (
         <button onClick={() => dispatch(decrement())}>-</button>
       )}
 
@@ -22,6 +23,8 @@ export const HomePage = () => {
       </button>
       <br />
       {isLogged ? <p>Valueable data here</p> : null}
+      <CardComponent /> */}
+      <CardComponent />
     </div>
   );
 };
