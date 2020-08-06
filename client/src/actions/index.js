@@ -15,3 +15,9 @@ export const logInOut = () => {
     type: "SIGNED_IN",
   };
 };
+
+export const cartClicked = () => {
+  return {
+    type: "CART_CLICKED",
+  };
+};

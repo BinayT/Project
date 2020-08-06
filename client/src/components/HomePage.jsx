@@ -9,7 +9,7 @@ export const HomePage = () => {
   const dispatch = useDispatch();
   return (
     <div>
-      {/* <h1>Home Page</h1>
+      <h1>Home Page</h1>
       {counter === 0 ? null : (
         <button onClick={() => dispatch(decrement())}>-</button>
       )}
@@ -23,7 +23,7 @@ export const HomePage = () => {
       </button>
       <br />
       {isLogged ? <p>Valueable data here</p> : null}
-      <CardComponent /> */}
+      <CardComponent />
       <CardComponent />
     </div>
   );
